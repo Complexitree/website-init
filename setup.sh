@@ -20,7 +20,7 @@ fi
 echo "==> Willkommen! Dieses Skript richtet Docker, Caddy (HTTPS) und Watchtower (Auto-Update) ein."
 
 # --- Fragen / Inputs ---
-DEFAULT_IMAGE="docker.io/complexitree/website:latest"
+DEFAULT_IMAGE="docker.io/complexitree/website:master"
 IMAGE=$(ask "Container-Image [${DEFAULT_IMAGE}]: "); IMAGE="${IMAGE:-$DEFAULT_IMAGE}"
 
 DOMAINS_CSV=$(ask "Liste der Domains (Komma-getrennt, inkl. www): ")
