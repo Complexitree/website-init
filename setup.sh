@@ -171,9 +171,7 @@ REDIR
   echo "    reverse_proxy app:5000"
   if [ -n "$LE_EMAIL" ]; then
     cat <<TLS
-    tls {
-        email $LE_EMAIL
-    }
+    tls $LE_EMAIL
 TLS
   else
     echo "    tls { }"
