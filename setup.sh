@@ -49,10 +49,10 @@ LE_EMAIL="$(trim "$LE_EMAIL")"
 
 DOCKERHUB_USERNAME=$(ask "Docker Hub Benutzername: ")
 [ -z "$DOCKERHUB_USERNAME" ] && die "Docker Hub Benutzername fehlt."
-DOCKERHUB_TOKEN=$(ask_s "Docker Hub Access Token (wird nicht angezeigt): ")
+DOCKERHUB_TOKEN=$(ask "Docker Hub Access Token: ")
 [ -z "$DOCKERHUB_TOKEN" ] && die "Docker Hub Token fehlt."
 
-INSTALLER_ACCESS_GRANT=$(ask_s "INSTALLER_ACCESS_GRANT (wird nicht angezeigt): ")
+INSTALLER_ACCESS_GRANT=$(ask "INSTALLER_ACCESS_GRANT: ")
 [ -z "$INSTALLER_ACCESS_GRANT" ] && die "INSTALLER_ACCESS_GRANT fehlt."
 
 USE_UFW=$(ask "UFW-Firewall konfigurieren und Ports 22/80/443 erlauben? [y/N]: ")
